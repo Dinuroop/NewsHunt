@@ -11,8 +11,8 @@ import {
   Route
 }from "react-router-dom";
 import Home from './Components/Home';
-import Signup from './Components/Signup';
-import Login from './Components/Login';
+// import Signup from './Components/Signup';
+// import Login from './Components/Login';
 // import Home from './Components/Home';
 
 export default class App extends Component {
@@ -35,8 +35,8 @@ export default class App extends Component {
         // onLoaderFinished={() => setProgress(0)}
         />
         <Routes>
-          <Route exact path="/signup" element={<Signup/>}/>
-          <Route exact path="/login" element={<Login/>}/>
+          {/* <Route exact path="/signup" element={<Signup/>}/>
+          <Route exact path="/login" element={<Login/>}/> */}
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/general" element={<News setProgress={this.setProgress} key="general" pageSize={15} country='in' category='general'/>}/>
           <Route exact path="/business" element={<News setProgress={this.setProgress} key="business" pageSize={15} country='in' category='business'/>}/>

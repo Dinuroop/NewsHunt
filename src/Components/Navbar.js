@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle';
 import img from "../Assests/globe.png"
 import {Link} from "react-router-dom";
-import app from "../base";
+
 
 var query;
 const Navbar=()=> {
