@@ -4,9 +4,9 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import NewsItem from './NewsItem';
 import Spinner from './Spinner';
 import PropTypes from 'prop-types'
-import { query } from './Navbar';
+
 import nores from "../Assests/cat2.png";
-import DatePicker from "react-datepicker";
+
 
 
 const News =(props)=> {
@@ -16,8 +16,6 @@ const News =(props)=> {
     const [page, setPage] = useState(1);
     const [totalResults, setTotalresults] = useState(0);
     const [search, setSearch] = useState("");
-    const [startDate, setStartDate] = useState(null);
-    const [endDate, setEndDate] = useState(null);
     const [url, setURl] = useState(`https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=3a91a9ebf071459eacf31cfb94ab1be3&page=${page}&pageSize=${props.pageSize}`);
 
     //const API_URL_HEADLINES = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=3a91a9ebf071459eacf31cfb94ab1be3&page=${page}&pageSize=${props.pageSize}`;
@@ -34,16 +32,6 @@ const News =(props)=> {
     else{
         setURl(`https://newsapi.org/v2/everything?q=${search}&apiKey=8a7d978f6d2f4052b4ca9a0e0ada7548&page=${page}`);
     }
-    if (startDate !== null && endDate !== null && startDate > endDate) {
-        console.log("startDate > endDate");
-        return;
-      }
-      if (startDate !== null) {
-        startDate.setHours(0, 0, 0, 0);
-      }
-      if (endDate !== null) {
-        endDate.setHours(24, 0, 0, 0);
-      }
     console.log(url);
     updateNews();
 }

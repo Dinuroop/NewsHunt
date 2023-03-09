@@ -11,9 +11,6 @@ import {
   Route
 }from "react-router-dom";
 import Home from './Components/Home';
-// import Signup from './Components/Signup';
-// import Login from './Components/Login';
-// import Home from './Components/Home';
 
 export default class App extends Component {
   pageSize = 15;
