@@ -7,9 +7,12 @@ export default function Home(){
     <center style={{marginTop:"20px"}}>
       <h1><b>NewsHunt</b></h1>
     </center>
-  <div className="flex" style={{justifyItems:"center",display:"flex", flexDirection:"row", marginLeft:"100px", marginTop:"70px"}}>
-    <div className="flex" style={{flexDirection:"column",marginTop:"100px"}}>
-        <h1 style={{fontFamily:"cursive"}}>
+  <div className="flex" style={{display:"flex", flexWrap:"wrap", margin:"30px", marginTop:"70px"}}>
+    <div>
+      <img src={city} style={{maxWidth:"100%", height:"auto", marginTop:"20px"}} alt="city" />
+    </div>
+    <div className="flex">
+        <h1 style={{display:"flex",alignItems:"flex-end", fontFamily:"cursive", marginTop:"75px"}}>
             Let's enjoy reading news <br /> from all over the world!
         </h1>
         <p>
@@ -18,9 +21,6 @@ export default function Home(){
         <div class="second">
         <a href="/general" target="_blank" rel="noopener noreferrer" className="btn mr-2"><i className="fas fa-link"></i> Start Reading </a>
         </div>
-    </div>
-    <div style={{marginLeft:"120px"}}>
-      <img src={city} alt="city" />
     </div>
   </div>
     
