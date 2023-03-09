@@ -1,5 +1,6 @@
 import React from "react";
 import city from "../Assests/new.png";
+import { Link } from "react-router-dom";
 //import imag from "../Assests/OIP.jpeg";
 export default function Home(){
   return (
@@ -19,7 +20,7 @@ export default function Home(){
            Categories Available for every one!{" "}
         </p>
         <div class="second">
-        <a href="/general" target="_blank" rel="noopener noreferrer" className="btn mr-2"><i className="fas fa-link"></i> Start Reading </a>
+        <Link to="/general" className="btn mr-2"><i className="fas fa-link"></i> Start Reading </Link>
         </div>
     </div>
   </div>
